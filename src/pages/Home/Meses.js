@@ -15,7 +15,7 @@ const Meses = () => {
             <table className="table">
                 <thead>
                     <tr>
-                        <th> <Link to={`/movimentacoes/${mes}`}>{mes}</Link></th>
+                        <th>Mês</th>
                         <th>Previsão Entrada</th>
                         <th>Entrada</th>
                         <th>Previsão Saida</th>
@@ -29,7 +29,7 @@ const Meses = () => {
                             .map(mes => {
                                 return (
                                     <tr key={mes}>
-                                        <td>{mes}</td>
+                                        <td> <Link to={`/movimentacoes/${mes}`}>{mes}</Link></td>
                                         <td>{data.data[mes].previsao_entrada}</td>
                                         <td>{data.data[mes].entrada}</td>
                                         <td>{data.data[mes].previsao_saida}</td>
