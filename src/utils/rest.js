@@ -69,10 +69,23 @@ const init = baseURL => {
         return [data, remove]
     }
 
+    const usePatch = () => {
+        const [data, dispatch] = useReducer(reducer, INITAL_STATE)
+
+        const patch = async (resouce, data) => {
+            dispatch({ type: 'REQUEST' })
+            const res = await axios.delete(baseURL + resouce + '.json', data)
+            dispatch({ type: 'SUCCESS' })
+        }
+
+        return [data, patch]
+    }
+
     return {
         useGet,
         usePost,
-        useDelete
+        useDelete,
+        usePatch
     }
 }
 
