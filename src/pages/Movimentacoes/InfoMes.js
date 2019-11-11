@@ -21,10 +21,10 @@ const InfoMes = ({ data }) => {
             <div>
                 <span>
                     Previsão Entrada: {infoMes.data.previsao_entrada}
-                    <input type="text" onBlur={alterarPrevisaoEntrada} />
+                    <input type='text' onBlur={alterarPrevisaoEntrada} />
                     / Previsão Saida: {infoMes.data.previsao_saida}
                 </span><br />
-                <input type="text" onBlur={alterarPrevisaoSaida} />
+                <input type='text' onBlur={alterarPrevisaoSaida} />
                 Entrada: {infoMes.data.entradas} / Saidas: {infoMes.data.saidas}
             </div>
         )

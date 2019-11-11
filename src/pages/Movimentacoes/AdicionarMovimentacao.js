@@ -23,10 +23,10 @@ const AdicionarMovimentacao = ({ salvarNovaMovimentacao }) => {
     }
     return (
         <tr>
-            <td><input type="text" value={descricao} onChange={onChangeDescricao} /></td>
-            <td><input type="text" value={valor} onChange={onChangeValor} /></td>
+            <td><input type='text' value={descricao} onChange={onChangeDescricao} /></td>
+            <td><input type='text' value={valor} onChange={onChangeValor} /></td>
             <td>
-                <button className="btn btn-success" onClick={salvarMovimentacao}>+</button>
+                <button className='btn btn-success' onClick={salvarMovimentacao}>+</button>
             </td>
         </tr>
     )

@@ -7,14 +7,6 @@ import AdicionarMovimentacao from './AdicionarMovimentacao'
 
 const Movimentacoes = ({ match }) => {
     const { movimentacoes, salvarNovaMovimentacao, removerMovimentacao } = useMovimentacaoApi(match.params.data)
-    /*
-    {
-      "rules": {
-        ".read": "auth.provider === 'password'",
-        ".write": "auth.provider === 'password'"
-      }
-    }
-    */
     const sleep = time => new Promise(resolve => setTimeout(resolve, time))
     const salvarMovimentacao = async (dados) => {
         await salvarNovaMovimentacao(dados)
